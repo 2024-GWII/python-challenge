@@ -41,18 +41,18 @@ gd_month = month_data[monthly_change.index(min(monthly_change))]
 
 
 # print output
-text_output.append("Financial Analysis")
-text_output.append("-------------------------\n")
+text_output.append("\nFinancial Analysis")
+text_output.append("-------------------------")
 text_output.append("Total Months: " + str(total_months))
 text_output.append("Total: " + str(total))
 text_output.append("Average Change: " + str(average_change))
 text_output.append("Greatest Increase In Profits: " + str(gi_month) + "  (" + str(greatest_increase) + ")")
-text_output.append("Greatest Decrease In Profits: " + str(gd_month) + "  (" + str(greatest_decrease) + ")")
+text_output.append("Greatest Decrease In Profits: " + str(gd_month) + "  (" + str(greatest_decrease) + ")\n")
 
 for line in text_output:
     print(line)
 
-outpath = os.path.join('Analysis', 'MyFile.txt')
+outpath = os.path.join('Analysis', 'budget_analysis.txt')
 file_object = open(outpath, "a")
 for line in text_output:
     file_object.write(line)
